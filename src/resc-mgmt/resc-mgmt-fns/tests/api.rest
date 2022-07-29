@@ -1,0 +1,200 @@
+###Hello World
+POST {{funcUrl}}/api/fn-hello-world?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Bablu"
+}
+
+###Add AD Members
+POST {{funcUrl}}/api/fn-add-aad-group-members?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "groupId": "f8d42891-3bd0-4c7f-970e-2e526d1b29eb",
+    "memberIdList": ["4aa4b930-2468-4bb8-9799-ba7a9d34215d", "83efc6a4-caf2-451b-bbca-ecbc061b9034"]
+}
+
+###Add AD Owner
+POST {{funcUrl}}/api/fn-add-aad-group-owner?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "groupId": "0b8d125a-6fad-438b-925b-2dd1a3cc4621",
+    "ownerId": "9fa7127d-a3d1-4d70-b448-185089a5d2da"
+}
+
+###List AD Groups
+POST {{funcUrl}}/api/fn-list-aad-groups?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "groupNameList": ["az-poc"]
+}
+
+###List AD users
+POST {{funcUrl}}/api/fn-list-aad-users?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "upnList": [ "v-balawrence","blawrence@mttech2021outlook.onmicrosoft.com"]
+}
+
+###Create AD Security Group
+POST {{funcUrl}}/api/fn-create-aad-security-group?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "groupName": "az-poc-test-group5",
+    "groupDescription": "v-CSA Group for az-poc-test-group5"    
+}
+
+###Run CosmosDB query
+POST {{funcUrl}}/api/fn-query-cosmos-db?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "query" : "SELECT * FROM r"  
+}
+
+###Get cosmos DB item
+GET  {{funcUrl}}/api/fn-get-cosmos-db-item?requestId=sdfd898191&ownerEmail=bablulawrence@gmail.com&code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+###Get cosmos DB item
+POST {{funcUrl}}/api/fn-get-cosmos-db-item?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "requestId" : "sdfd89819",
+  "ownerEmail" : "bablulawrence@gmail.com"  
+}
+
+###Durable HTTP starter for create resources orchastrator
+POST {{funcUrl}}/api/orchestrators/fn-drbl-create-resources-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "requestId" : "12196cu08",  
+  "requestType" : "poc",
+  "msxEngagementId" : "NA",
+  "ownerName" : "Bablu Lawrence",
+  "ownerEmail" : "v-balawrence",
+  "consumption" : 2341,
+  "client": "Client1",
+  "teamEmails" : "v-jphilipose;v-absarkar",    
+  "location" : "centralus",
+  "requestedDateTime" : "9/07/2021",
+  "approvedDateTime" : "9/07/2021"
+}
+
+###Durable HTTP starter for database query
+POST {{funcUrl}}/api/orchestrators/fn-drbl-query-sql-db-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "server" : "pvlab-fe00b4-synapse.sql.azuresynapse.net",
+  "database" : "sqldp01",
+  "output" : "json",
+  "load": 1,
+  "query": "SELECT TOP 20 * FROM Sales.Customer;"
+}
+
+###HTTP function for database query
+POST {{funcUrl}}/api/fn-get-query-sql-db?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "server" : "pvlab-fe00b4-synapse.sql.azuresynapse.net",
+  "database" : "sqldp01",
+  "output" : "stats",
+  "query": "SELECT TOP 3 * FROM Sales.Customer;"
+}
+
+###Durable HTTP starter for delete Purview entities
+POST {{funcUrl}}/api/orchestrators/fn-drbl-delete-purview-entities-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "accountName" : "azdemo103mfek9-pv101",
+  "query": "*",
+  "limit": 100   
+}
+
+###Durable HTTP starter for search Purview entities
+POST {{funcUrl}}/api/orchestrators/fn-drbl-search-purview-entities-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "accountName" : "azdemo103mfek9-pv101",
+  "query": "adworks"   
+}
+
+###Durable HTTP starter for VM stop
+POST {{funcUrl}}/api/orchestrators/fn-drbl-stop-vm-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "subscriptionId" : "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e" 
+}
+
+###Durable HTTP starter for SQL dedicated pool pause
+POST {{funcUrl}}/api/orchestrators/fn-drbl-pause-sql-dp-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "subscriptionId" : "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e" 
+}
+
+
+###Get SQL Dedicated Pool
+POST {{funcUrl}}/api/fn-get-sql-dedicated-pool?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "subscriptionId": "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e",
+  "resourceGroupName": "azdemo101-rg-zrlx4",
+  "workspaceName": "azsynapsewksxqwjeq",
+  "sqlPoolName": "sqldp01"
+}
+
+###Pause SQL Dedicated Pool
+POST {{funcUrl}}/api/fn-pause-sql-dedicated-pool?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "subscriptionId": "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e",
+  "resourceGroupName": "azdemo101-rg-zrlx4",
+  "workspaceName": "azsynapsewksxqwjeq",
+  "sqlPoolName": "sqldp01"
+}
+
+###Resume SQL Dedicated Pool
+POST {{funcUrl}}/api/fn-resume-sql-dedicated-pool?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "subscriptionId": "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e",
+  "resourceGroupName": "azdemo101-rg-zrlx4",
+  "workspaceName": "azsynapsewksxqwjeq",
+  "sqlPoolName": "sqldp01"
+}
+
+###Publish Event Grid Event
+POST {{eventGridUrl}}/api/events?overload=EventGridEvent&api-version=2018-01-01 HTTP/1.1
+aeg-sas-key: {{eventGridKey}}
+Content-Type: application/json
+
+[
+  {
+    "id": "b3ccc7e3-c1cb-49bf-b7c8-0d4e60980616",
+    "subject": "TestSubject",
+    "data": {
+      "Property1": "Value1",
+      "Property2": "Value2"
+    },
+    "eventType": "Microsoft.Contoso.TestEvent",
+    "eventTime": "2017-12-04T22:06:09.147165Z",
+    "dataVersion": "1.0"
+  }
+]

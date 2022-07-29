@@ -1,0 +1,14 @@
+aiohttp
+azure-functions
+azure-functions-durable
+azure-identity
+azure-synapse-artifacts
+azure-mgmt-synapse
+azure-mgmt-resourcegraph
+pyapacheatlas
+pyodbc
+azure-mgmt-compute
+azure-mgmt-resource
+azure-mgmt-authorization
+azure-cosmos
+requests

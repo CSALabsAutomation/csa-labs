@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=azureutilsfnsstrg;AccountKey=2jl/H2XOukInh/gRlQEXgMK36LdE1fypOqnFj/rGEbjUi0aGJTPmfxJACGRa7VxzQEzd0JoOxxT/+ASt7nkH+A==;EndpointSuffix=core.windows.net",
+    "MyEventGridTopicUriSetting": "https://azure-utils-event-grid.southcentralus-1.eventgrid.azure.net/api/events?overload=EventGridEvent&api-version=2018-01-01",
+    "MyEventGridTopicKeySetting": "jLbhgfctDLE4SkTFCxCdwJXIhNq7wem6ZCN1P0FUUws="
+  }
+}
