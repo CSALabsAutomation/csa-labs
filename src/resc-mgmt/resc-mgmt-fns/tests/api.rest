@@ -104,6 +104,15 @@ Content-Type: application/json
                     }   
 }
 
+POST {{funcUrl}}/api/orchestrators/fn-drbl-get-resource-cost-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{        
+    "fromDatetime" : "2022-06-13 12:00",
+    "toDatetime" : "2022-07-22 12:00",
+    "scope": "/subscriptions/edf6dd9d-7c4a-4bca-a997-945f3d60cf4e/resourceGroups/azdemo103-rg-mfek9"
+}
+
 ###Durable HTTP starter for database query
 POST {{funcUrl}}/api/orchestrators/fn-drbl-query-sql-db-orchstr?code={{funcKey}} HTTP/1.1
 Content-Type: application/json
