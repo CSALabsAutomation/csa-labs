@@ -88,6 +88,22 @@ Content-Type: application/json
   "approvedDateTime" : "9/07/2021"
 }
 
+###Durable HTTP starter for template deployment
+POST {{funcUrl}}/api/orchestrators/fn-drbl-deploy-template-orchstr?code={{funcKey}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "deploymentName" : "deploystrg1234",           
+  "subscriptionId": "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e",
+  "resourceGroupName" : "azure-utils",       
+  "templateLinkUri" : "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/quickstarts/microsoft.storage/storage-account-create/azuredeploy.json",
+  "templateParams" : { 
+                      "storageAccountName": {
+                          "value" : "strgacctxcts123"
+                      }
+                    }   
+}
+
 ###Durable HTTP starter for database query
 POST {{funcUrl}}/api/orchestrators/fn-drbl-query-sql-db-orchstr?code={{funcKey}} HTTP/1.1
 Content-Type: application/json
