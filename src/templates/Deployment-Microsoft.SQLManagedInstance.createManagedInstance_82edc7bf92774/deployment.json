@@ -1,0 +1,222 @@
+{
+  "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLManagedInstance.createManagedInstance_82edc7bf92774",
+  "name": "Microsoft.SQLManagedInstance.createManagedInstance_82edc7bf92774",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1",
+    "marketplaceItemId": "Microsoft.SQLManagedInstance"
+  },
+  "properties": {
+    "templateHash": "11916069602632681375",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "managedInstanceName": {
+        "type": "String",
+        "value": "testmanagedsql1"
+      },
+      "deployInExistingSubnet": {
+        "type": "Bool",
+        "value": false
+      },
+      "virtualNetworkResourceGroupName": {
+        "type": "String",
+        "value": "migraterg"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "vnet-testmanagedsql1"
+      },
+      "subnetName": {
+        "type": "String",
+        "value": "ManagedInstance"
+      },
+      "skuName": {
+        "type": "String",
+        "value": "GP_Gen5"
+      },
+      "skuEdition": {
+        "type": "String",
+        "value": "GeneralPurpose"
+      },
+      "hardwareFamily": {
+        "type": "String",
+        "value": "Gen5"
+      },
+      "storageSizeInGB": {
+        "type": "Int",
+        "value": 256
+      },
+      "vCores": {
+        "type": "Int",
+        "value": 8
+      },
+      "licenseType": {
+        "type": "String",
+        "value": "LicenseIncluded"
+      },
+      "dnsZonePartner": {
+        "type": "String",
+        "value": ""
+      },
+      "collation": {
+        "type": "String",
+        "value": "SQL_Latin1_General_CP1_CI_AS"
+      },
+      "timezoneId": {
+        "type": "String",
+        "value": "UTC"
+      },
+      "proxyOverride": {
+        "type": "String",
+        "value": "Proxy"
+      },
+      "publicDataEndpointEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "nsgForPublicEndpoint": {
+        "type": "String",
+        "value": "allowFromAzureCloudTo3342NSG"
+      },
+      "minimalTlsVersion": {
+        "type": "String",
+        "value": "1.2"
+      },
+      "administratorLogin": {
+        "type": "String",
+        "value": "cloudadmin"
+      },
+      "administratorLoginPassword": {
+        "type": "SecureString"
+      },
+      "administrators": {
+        "type": "Object",
+        "value": {}
+      },
+      "managedInstanceTags": {
+        "type": "Object",
+        "value": {}
+      },
+      "requestedBackupStorageRedundancy": {
+        "type": "String",
+        "value": "Geo"
+      },
+      "maintenanceConfigurationId": {
+        "type": "String",
+        "value": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default"
+      },
+      "zoneRedundant": {
+        "type": "Bool",
+        "value": false
+      },
+      "enableADS": {
+        "type": "Bool",
+        "value": false
+      },
+      "enableVA": {
+        "type": "Bool",
+        "value": false
+      },
+      "identity": {
+        "type": "Object",
+        "value": {
+          "type": "SystemAssigned"
+        }
+      },
+      "primaryUserAssignedIdentityId": {
+        "type": "String",
+        "value": ""
+      },
+      "servicePrincipal": {
+        "type": "Object",
+        "value": {
+          "type": "SystemAssigned"
+        }
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2022-07-27T21:09:32.6382656Z",
+    "duration": "PT0.5816019S",
+    "correlationId": "bb2f58b3-b7f7-4062-80af-d9e6f6d11b3d",
+    "providers": [
+      {
+        "namespace": "Microsoft.Resources",
+        "resourceTypes": [
+          {
+            "resourceType": "deployments",
+            "locations": [
+              null
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Sql",
+        "resourceTypes": [
+          {
+            "resourceType": "managedInstances",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/deployRequiredNetworkingResources_g72d4uyeekje6",
+            "resourceType": "Microsoft.Resources/deployments",
+            "resourceName": "deployRequiredNetworkingResources_g72d4uyeekje6"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1",
+        "resourceType": "Microsoft.Sql/managedInstances",
+        "resourceName": "testmanagedsql1"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1",
+            "resourceType": "Microsoft.Sql/managedInstances",
+            "resourceName": "testmanagedsql1"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1/securityAlertPolicies/Default",
+        "resourceType": "Microsoft.Sql/managedInstances/securityAlertPolicies",
+        "resourceName": "testmanagedsql1/Default"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1",
+            "resourceType": "Microsoft.Sql/managedInstances",
+            "resourceName": "testmanagedsql1"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Storage/storageAccounts/sqlvajds2ezigyhwmg",
+            "resourceType": "Microsoft.Storage/storageAccounts",
+            "resourceName": "sqlvajds2ezigyhwmg"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1/securityAlertPolicies/Default",
+            "resourceType": "Microsoft.Sql/managedInstances/securityAlertPolicies",
+            "resourceName": "testmanagedsql1/Default"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/managedInstances/testmanagedsql1/vulnerabilityAssessments/Default",
+        "resourceType": "Microsoft.Sql/managedInstances/vulnerabilityAssessments",
+        "resourceName": "testmanagedsql1/Default"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/602081CABCFFB03A",
+    "operationId": "602081CABCFFB03A",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T21:00:27.8251522Z",
+      "duration": "PT0.4494417S",
+      "trackingId": "8e36b73e-ca1a-4bd0-802c-3a1ef97f64ea",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1/vulnerabilityAssessments/Default",
+        "resourceType": "Microsoft.Sql/servers/vulnerabilityAssessments",
+        "resourceName": "testsourceserver1/Default"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/3D00DF7DBFF6DDAD",
+    "operationId": "3D00DF7DBFF6DDAD",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T21:00:27.3168539Z",
+      "duration": "PT4.0755995S",
+      "trackingId": "b57ade1d-7b8a-4493-bdf9-ab232c43df2c",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1/securityAlertPolicies/Default",
+        "resourceType": "Microsoft.Sql/servers/securityAlertPolicies",
+        "resourceName": "testsourceserver1/Default"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/026EBA0A12A2FCAB",
+    "operationId": "026EBA0A12A2FCAB",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T21:00:23.1505172Z",
+      "duration": "PT2M3.3000281S",
+      "trackingId": "d9cb0bf1-639e-4af1-ad39-3c3fd8a3c109",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1/databases/SingleDB",
+        "resourceType": "Microsoft.Sql/servers/databases",
+        "resourceName": "testsourceserver1/SingleDB"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/C7316001C557CDDF",
+    "operationId": "C7316001C557CDDF",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:59:31.8523883Z",
+      "duration": "PT0.6809398S",
+      "trackingId": "b1641bae-eb7d-4d40-81b3-22d1693c6308",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1/firewallrules/ClientIp-2022-7-27_13-58-5",
+        "resourceType": "Microsoft.Sql/servers/firewallrules",
+        "resourceName": "testsourceserver1/ClientIp-2022-7-27_13-58-5"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/06CEAFC5D7097925",
+    "operationId": "06CEAFC5D7097925",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:59:31.388825Z",
+      "duration": "PT0.2173765S",
+      "trackingId": "fcbe3bd0-18a7-46b7-b5a7-f0de33248953",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1/connectionPolicies/Default",
+        "resourceType": "Microsoft.Sql/servers/connectionPolicies",
+        "resourceName": "testsourceserver1/Default"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/3F2953E3564B3519",
+    "operationId": "3F2953E3564B3519",
+    "properties": {
+      "provisioningOperation": "Read",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:59:31.2539484Z",
+      "duration": "PT0.0824999S",
+      "trackingId": "7288488e-a6b6-4bf5-992e-06b51d55f53b",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1",
+        "resourceType": "Microsoft.Sql/servers",
+        "resourceName": "testsourceserver1",
+        "apiVersion": "2018-06-01-preview"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/F95F6B33A30CAA19",
+    "operationId": "F95F6B33A30CAA19",
+    "properties": {
+      "provisioningOperation": "Action",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:58:44.3550302Z",
+      "duration": "PT0.080005S",
+      "trackingId": "a64c6ba9-5211-459e-b86e-8929a804669d",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Storage/storageAccounts/sqlvajds2ezigyhwmg",
+        "resourceType": "Microsoft.Storage/storageAccounts",
+        "resourceName": "sqlvajds2ezigyhwmg",
+        "actionName": "listKeys",
+        "apiVersion": "2018-02-01"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/B90A90FFFA01E2CC",
+    "operationId": "B90A90FFFA01E2CC",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:58:44.2279152Z",
+      "duration": "PT24.3774261S",
+      "trackingId": "38239bfb-ed40-42f3-9a9d-c125f6ba949a",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Storage/storageAccounts/sqlvajds2ezigyhwmg",
+        "resourceType": "Microsoft.Storage/storageAccounts",
+        "resourceName": "sqlvajds2ezigyhwmg"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/26BD548EA3BEAE07",
+    "operationId": "26BD548EA3BEAE07",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T20:59:31.1163069Z",
+      "duration": "PT1M11.2658178S",
+      "trackingId": "d8955c0a-86d1-4919-a997-0b98c7cea945",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Sql/servers/testsourceserver1",
+        "resourceType": "Microsoft.Sql/servers",
+        "resourceName": "testsourceserver1"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.SQLDatabase.newDatabaseNewServer_cc840b7fdf574a0caf988/operations/08585426513869115472",
+    "operationId": "08585426513869115472",
+    "properties": {
+      "provisioningOperation": "EvaluateDeploymentOutput",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-07-27T21:00:28.0126955Z",
+      "duration": "PT0.1333937S",
+      "trackingId": "b24853d0-32c4-430d-b27a-1061ec01e976",
+      "statusCode": "OK"
+    }
+  }
+]

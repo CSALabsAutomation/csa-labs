@@ -1,0 +1,81 @@
+{
+  "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/Microsoft.AzureDMS",
+  "name": "Microsoft.AzureDMS",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourcegroups/migraterg/providers/Microsoft.DataMigration/services/DMSDB",
+    "marketplaceItemId": "Microsoft.AzureDMS"
+  },
+  "properties": {
+    "templateHash": "1377135056546152104",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "westcentralus"
+      },
+      "name": {
+        "type": "String",
+        "value": "DMSDB"
+      },
+      "sku": {
+        "type": "String",
+        "value": "Premium_4vCores"
+      },
+      "tags": {
+        "type": "Object",
+        "value": {}
+      },
+      "networkName": {
+        "type": "String",
+        "value": "DMSvnet"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2022-07-27T21:46:41.3222165Z",
+    "duration": "PT0.5894091S",
+    "correlationId": "e466a992-ac60-4dfe-9713-825596a87ba4",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "westcentralus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.DataMigration",
+        "resourceTypes": [
+          {
+            "resourceType": "services",
+            "locations": [
+              "westcentralus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/virtualNetworks/DMSvnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "DMSvnet"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.DataMigration/services/DMSDB",
+        "resourceType": "Microsoft.DataMigration/services",
+        "resourceName": "DMSDB"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}

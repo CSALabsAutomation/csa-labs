@@ -1,0 +1,456 @@
+{
+  "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Resources/deployments/CreateVm-microsoftsqlserver.sql2019-ws2019-standa-20220727142656",
+  "name": "CreateVm-microsoftsqlserver.sql2019-ws2019-standa-20220727142656",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourcegroups/migraterg/providers/Microsoft.Compute/virtualMachines/sqlserver",
+    "marketplaceItemId": "microsoftsqlserver.sql2019-ws2022",
+    "provisioningHash": "SolutionProvider"
+  },
+  "properties": {
+    "templateHash": "16974053289392821097",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "networkInterfaceName1": {
+        "type": "String",
+        "value": "sqlserver177_z1"
+      },
+      "enableAcceleratedNetworking": {
+        "type": "Bool",
+        "value": true
+      },
+      "networkSecurityGroupName": {
+        "type": "String",
+        "value": "sqlserver-nsg"
+      },
+      "networkSecurityGroupRules": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "RDP",
+            "properties": {
+              "priority": 300,
+              "protocol": "TCP",
+              "access": "Allow",
+              "direction": "Inbound",
+              "sourceAddressPrefix": "*",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*",
+              "destinationPortRange": "3389"
+            }
+          }
+        ]
+      },
+      "subnetName": {
+        "type": "String",
+        "value": "iaassubnet"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "iaasvnet"
+      },
+      "addressPrefixes": {
+        "type": "Array",
+        "value": [
+          "10.1.0.0/16",
+          "12.1.0.0/27"
+        ]
+      },
+      "subnets": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "default",
+            "properties": {
+              "addressPrefix": "10.1.0.0/24"
+            }
+          },
+          {
+            "name": "iaassubnet",
+            "properties": {
+              "addressPrefix": "12.1.0.0/28"
+            }
+          }
+        ]
+      },
+      "publicIpAddressName1": {
+        "type": "String",
+        "value": "sqlserver-ip"
+      },
+      "publicIpAddressType": {
+        "type": "String",
+        "value": "Static"
+      },
+      "publicIpAddressSku": {
+        "type": "String",
+        "value": "Standard"
+      },
+      "pipDeleteOption": {
+        "type": "String",
+        "value": "Detach"
+      },
+      "virtualMachineName": {
+        "type": "String",
+        "value": "sqlserver"
+      },
+      "virtualMachineName1": {
+        "type": "String",
+        "value": "sqlserver"
+      },
+      "virtualMachineComputerName1": {
+        "type": "String",
+        "value": "sqlserver"
+      },
+      "virtualMachineRG": {
+        "type": "String",
+        "value": "migraterg"
+      },
+      "osDiskType": {
+        "type": "String",
+        "value": "Premium_LRS"
+      },
+      "osDiskDeleteOption": {
+        "type": "String",
+        "value": "Delete"
+      },
+      "dataDisks1": {
+        "type": "Array",
+        "value": [
+          {
+            "lun": 0,
+            "createOption": "attach",
+            "deleteOption": "Detach",
+            "caching": "ReadOnly",
+            "writeAcceleratorEnabled": false,
+            "id": null,
+            "name": "sqlserver_DataDisk_0",
+            "storageAccountType": null,
+            "diskSizeGB": null,
+            "diskEncryptionSet": null
+          },
+          {
+            "lun": 1,
+            "createOption": "attach",
+            "deleteOption": "Detach",
+            "caching": "None",
+            "writeAcceleratorEnabled": false,
+            "id": null,
+            "name": "sqlserver_DataDisk_1",
+            "storageAccountType": null,
+            "diskSizeGB": null,
+            "diskEncryptionSet": null
+          }
+        ]
+      },
+      "dataDiskResources1": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "sqlserver_DataDisk_0",
+            "sku": "Premium_LRS",
+            "properties": {
+              "diskSizeGB": 1024,
+              "creationData": {
+                "createOption": "empty"
+              }
+            }
+          },
+          {
+            "name": "sqlserver_DataDisk_1",
+            "sku": "Premium_LRS",
+            "properties": {
+              "diskSizeGB": 1024,
+              "creationData": {
+                "createOption": "empty"
+              }
+            }
+          }
+        ]
+      },
+      "virtualMachineSize": {
+        "type": "String",
+        "value": "Standard_DS2_v2"
+      },
+      "nicDeleteOption": {
+        "type": "String",
+        "value": "Detach"
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "cloudadmin"
+      },
+      "adminPassword": {
+        "type": "SecureString"
+      },
+      "patchMode": {
+        "type": "String",
+        "value": "AutomaticByOS"
+      },
+      "enableHotpatching": {
+        "type": "Bool",
+        "value": false
+      },
+      "zone": {
+        "type": "String",
+        "value": "1"
+      },
+      "sqlVirtualMachineLocation": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "sqlVirtualMachineName": {
+        "type": "String",
+        "value": "sqlserver"
+      },
+      "sqlConnectivityType": {
+        "type": "String",
+        "value": "Private"
+      },
+      "sqlPortNumber": {
+        "type": "Int",
+        "value": 1433
+      },
+      "sqlStorageDisksCount": {
+        "type": "Int",
+        "value": 1
+      },
+      "sqlStorageWorkloadType": {
+        "type": "String",
+        "value": "OLTP"
+      },
+      "sqlStorageDisksConfigurationType": {
+        "type": "String",
+        "value": "NEW"
+      },
+      "sqlStorageStartingDeviceId": {
+        "type": "Int",
+        "value": 2
+      },
+      "sqlStorageDeploymentToken": {
+        "type": "Int",
+        "value": 12883
+      },
+      "sqlAutopatchingDayOfWeek": {
+        "type": "String",
+        "value": "Sunday"
+      },
+      "sqlAutopatchingStartHour": {
+        "type": "String",
+        "value": "2"
+      },
+      "sqlAutopatchingWindowDuration": {
+        "type": "String",
+        "value": "60"
+      },
+      "dataPath": {
+        "type": "String",
+        "value": "F:\\data"
+      },
+      "dataDisksLUNs": {
+        "type": "Array",
+        "value": [
+          0
+        ]
+      },
+      "logPath": {
+        "type": "String",
+        "value": "G:\\log"
+      },
+      "logDisksLUNs": {
+        "type": "Array",
+        "value": [
+          1
+        ]
+      },
+      "tempDbPath": {
+        "type": "String",
+        "value": "D:\\tempDb"
+      },
+      "dataFileCount": {
+        "type": "Int",
+        "value": 2
+      },
+      "dataFileSize": {
+        "type": "Int",
+        "value": 8
+      },
+      "dataGrowth": {
+        "type": "Int",
+        "value": 64
+      },
+      "logFileSize": {
+        "type": "Int",
+        "value": 8
+      },
+      "logGrowth": {
+        "type": "Int",
+        "value": 64
+      },
+      "sqlSystemDbOnDataDisk": {
+        "type": "Bool",
+        "value": false
+      },
+      "rServicesEnabled": {
+        "type": "String",
+        "value": "false"
+      },
+      "maxdop": {
+        "type": "Int",
+        "value": 0
+      },
+      "isOptimizeForAdHocWorkloadsEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "collation": {
+        "type": "String",
+        "value": "SQL_Latin1_General_CP1_CI_AS"
+      },
+      "minServerMemoryMB": {
+        "type": "Int",
+        "value": 0
+      },
+      "maxServerMemoryMB": {
+        "type": "Int",
+        "value": 2147483647
+      },
+      "isLPIMEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "isIFIEnabled": {
+        "type": "Bool",
+        "value": false
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2022-07-27T21:29:21.3316227Z",
+    "duration": "PT0.5644063S",
+    "correlationId": "6d4233dd-adce-4c4e-8a8f-34acdf894b49",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "networkInterfaces",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIpAddresses",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachines",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "disks",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.SqlVirtualMachine",
+        "resourceTypes": [
+          {
+            "resourceType": "SqlVirtualMachines",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/networkSecurityGroups/sqlserver-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "sqlserver-nsg"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/virtualNetworks/iaasvnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "iaasvnet"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/publicIpAddresses/sqlserver-ip",
+            "resourceType": "Microsoft.Network/publicIpAddresses",
+            "resourceName": "sqlserver-ip"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/networkInterfaces/sqlserver177_z1",
+        "resourceType": "Microsoft.Network/networkInterfaces",
+        "resourceName": "sqlserver177_z1"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Compute/disks/sqlserver_DataDisk_0",
+            "resourceType": "Microsoft.Compute/disks",
+            "resourceName": "sqlserver_DataDisk_0"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Compute/disks/sqlserver_DataDisk_1",
+            "resourceType": "Microsoft.Compute/disks",
+            "resourceName": "sqlserver_DataDisk_1"
+          },
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Network/networkInterfaces/sqlserver177_z1",
+            "resourceType": "Microsoft.Network/networkInterfaces",
+            "resourceName": "sqlserver177_z1"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Compute/virtualMachines/sqlserver",
+        "resourceType": "Microsoft.Compute/virtualMachines",
+        "resourceName": "sqlserver"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.Compute/virtualMachines/sqlserver",
+            "resourceType": "Microsoft.Compute/virtualMachines",
+            "resourceName": "sqlserver"
+          }
+        ],
+        "id": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/resourceGroups/migraterg/providers/Microsoft.SqlVirtualMachine/SqlVirtualMachines/sqlserver",
+        "resourceType": "Microsoft.SqlVirtualMachine/SqlVirtualMachines",
+        "resourceName": "sqlserver"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}
