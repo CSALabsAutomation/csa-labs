@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workflows_az_csa_labls_app_la_name": {
+            "defaultValue": "az-csa-labls-app-la",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[parameters('workflows_az_csa_labls_app_la_name')]",
+            "location": "eastus",
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "triggers": {
+                        "manual": {
+                            "type": "Request",
+                            "kind": "Http",
+                            "inputs": {
+                                "schema": {
+                                    "properties": {
+                                        "approvedDateTime": {
+                                            "type": "string"
+                                        },
+                                        "client": {
+                                            "type": "string"
+                                        },
+                                        "consumption": {
+                                            "type": "integer"
+                                        },
+                                        "location": {
+                                            "type": "string"
+                                        },
+                                        "msxEngagementId": {
+                                            "type": "string"
+                                        },
+                                        "ownerEmail": {
+                                            "type": "string"
+                                        },
+                                        "ownerName": {
+                                            "type": "string"
+                                        },
+                                        "requestId;": {
+                                            "type": "string"
+                                        },
+                                        "requestType": {
+                                            "type": "string"
+                                        },
+                                        "requestedDateTime": {
+                                            "type": "string"
+                                        },
+                                        "resourceGroupName": {
+                                            "type": "string"
+                                        },
+                                        "teamEmails": {
+                                            "type": "string"
+                                        },
+                                        "typeOfService": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "actions": {
+                        "Compose": {
+                            "runAfter": {},
+                            "type": "Compose",
+                            "inputs": "@triggerBody()"
+                        },
+                        "Create_Resource": {
+                            "runAfter": {
+                                "Compose": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Http",
+                            "inputs": {
+                                "body": "@outputs('Compose')",
+                                "method": "POST",
+                                "queries": {
+                                    "code": "DlhV-HDIW9blZ_Pq-IJH4w-YmNc5Qyfy6tALWui0WxHbAzFuZsUnkQ=="
+                                },
+                                "uri": "https://az-csa-labls-app-fns.azurewebsites.net/api/orchestrators/fn-drbl-create-resources-orchstr"
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {}
+            }
+        }
+    ]
+}
