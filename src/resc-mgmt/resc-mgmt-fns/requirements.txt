@@ -12,3 +12,4 @@ azure-mgmt-resource
 azure-mgmt-authorization
 azure-cosmos
 requests
+msal
