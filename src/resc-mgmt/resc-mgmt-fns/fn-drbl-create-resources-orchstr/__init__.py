@@ -85,6 +85,7 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
     azuredmsservicename = 'azlabsdmsservice' + params['requestId']
     azuredmsvnetname = 'azlabsdmsvnet' + params['requestId']
     azuredmssubnetname = 'azlabsdmssubnet' + params['requestId']
+    cosmosdbaccountname = 'cosmosaccount' + params['requestId']
 
     
     # get_aad_owner_result = yield context.call_activity('fn-drbl-list-aad-users-activity', { 'upnList': [ f"{params['ownerEmail']}"] })    
@@ -222,9 +223,35 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
                             'value': rg_name
                             }                   
                           }
-        }
-                         
-
+    }
+    elif(typeofservices == "cosmosdbsql"):  
+        deploy_template_params = {        
+       'deploymentName' : 'deploy_cosmos_db_sql',       
+       'subscriptionId' : subscription_id,       
+       'resourceGroupName' : rg_name,       
+       'templateLinkUri' : 'https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/cosmosdb-sql/azuredeploy.json',
+       'templateParams' : { 
+                            'accountName': {
+                             'value' : cosmosdbaccountname
+                                           },
+                          'primaryRegion': {
+                              'value': 'East US'
+                                           },
+                          'secondaryRegion': {
+                              'value': 'West US'
+                                             },
+                          'databaseName': {
+                              'value': 'myDatabase'
+                                          },
+                           'containerName': {
+                              'value': 'myContainer'
+                                            },
+                           'throughput': {
+                               'value': 400
+                                         }
+                                    
+                        }
+    }
     else:
         deploy_template_params = {        
          'deploymentName' : 'deploy_sql_server_db',       
@@ -242,7 +269,6 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
                            'value': 'Sariyu@123'
                                                     }
                         }
-
     }
     
     template_deployment = yield context.call_activity('fn-drbl-deploy-template-activity', deploy_template_params)
