@@ -252,6 +252,36 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
                                     
                         }
     }
+    elif(typeofservices == "SynapseDeploy"):
+        deploy_template_params = {        
+       'deploymentName' : 'deploy_azure_synpsedeploy',       
+       'subscriptionId' : subscription_id,       
+       'resourceGroupName' : rg_name,   
+        'location': location,    
+       'templateLinkUri' : 'https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azureSynapseE2e/AzureAnalyticsE2E.json',
+       'templateParams' : {  
+                        'ctrlDeployPurview':{
+                              'value' : True
+                                    } ,
+                        'ctrlDeployAI':{
+                              'value' : False
+                                    } ,
+                        'ctrlDeployStreaming':{
+                              'value' : False
+                                    } ,
+                        'ctrlDeployDataShare':{
+                              'value' : False
+                                    } ,
+                        'ctrlDeployPrivateDNSZones':{
+                              'value' : False
+                                    } ,
+                         'synapseSqlAdminPassword':{
+                              'value' : 'Sankar@112'
+                                    }  
+                                 
+                        }
+
+    }
     else:
         deploy_template_params = {        
          'deploymentName' : 'deploy_sql_server_db',       
