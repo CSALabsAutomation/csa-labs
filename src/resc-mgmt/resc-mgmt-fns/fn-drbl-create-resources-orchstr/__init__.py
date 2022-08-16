@@ -261,7 +261,7 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
        'templateLinkUri' : 'https://raw.githubusercontent.com/CSALabsAutomation/quickstart-templates/main/azureSynapseE2e/AzureAnalyticsE2E.json',
        'templateParams' : {  
                         'ctrlDeployPurview':{
-                              'value' : True
+                              'value' : False
                                     } ,
                         'ctrlDeployAI':{
                               'value' : False
