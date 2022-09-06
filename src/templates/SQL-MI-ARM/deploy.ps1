@@ -41,10 +41,10 @@ param(
  $deploymentName,
 
  [string]
- $templateFilePath = ".\azuredeploy1.json",
+ $templateFilePath = ".\azuredeploy.json",
 
  [string]
- $parametersFilePath = ".\azuredeploy.parameters1.json"
+ $parametersFilePath = ".\azuredeploy.parameters.json"
 )
 
 <#
