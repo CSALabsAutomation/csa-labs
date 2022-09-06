@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "managedInstanceName": {
+      "value": ""
+    },
+    "skuName": {
+      "value": "GP_Gen5"
+    },
+    "skuEdition": {
+      "value": "GeneralPurpose"
+    },
+    "storageSizeInGB": {
+      "value": 32
+    },
+    "vCores": {
+      "value": 4
+    },
+    "licenseType": {
+      "value": "LicenseIncluded"
+    },
+    "hardwareFamily": {
+      "value": "Gen5"
+    },
+    "dnsZonePartner": {
+      "value": ""
+    },
+    "collation": {
+      "value": "SQL_Latin1_General_CP1_CI_AS"
+    },
+    "proxyOverride": {
+      "value": "Proxy"
+    },
+    "minimalTlsVersion": {
+      "value": "1.2"
+    },
+    "publicDataEndpointEnabled": {
+      "value": false
+    },
+    "timezoneId": {
+      "value": "UTC"
+    },
+    "nsgForPublicEndpoint": {
+      "value": ""
+    },
+    "managedInstanceTags": {
+      "value": {
+        "Admin": "v-Mhossen@microsoft.com"
+      }
+    },
+    "requestedBackupStorageRedundancy": {
+      "value": "Local"
+    },
+    "zoneRedundant": {
+      "value": false
+    },
+    "deployInExistingSubnet": {
+      "value": true
+    },
+    "virtualNetworkResourceGroupName": {
+      "value": ""
+    },
+    "virtualNetworkName": {
+      "value": ""
+    },
+    "subnetName": {
+      "value": ""
+    },
+    "enableADS": {
+      "value": false
+    },
+    "enableVA": {
+      "value": false
+    },
+    "identity": {
+      "value": {
+        "type": "SystemAssigned"
+      }
+    },
+    "primaryUserAssignedIdentityId": {
+      "value": "default"
+    },
+    "servicePrincipal": {
+      "value": {
+        "type": "None"
+      }
+    },
+    "maintenanceConfigurationId": {
+      "value": "/subscriptions/cbb956ec-6c04-42ae-8428-91d91154f780/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default"
+    },
+    "administratorLogin": {
+      "value": ""
+    },
+    "administratorLoginPassword": {
+      "value": ""
+    }
+  }
+}
